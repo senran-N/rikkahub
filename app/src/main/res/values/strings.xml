@@ -175,6 +175,11 @@
     <!-- Code Block -->
     <string name="code_block_copy">Copy Code</string>
     <string name="code_block_preview">Preview</string>
+    <string name="lines">lines</string>
+    <string name="expand">Expand</string>
+    <string name="close">Close</string>
+    <string name="preview">Preview</string>
+    <string name="click_to_view_full_code">Click to view full code</string>
     
     <!-- Mermaid Diagram -->
     <string name="mermaid_export">Export</string>
@@ -190,6 +195,8 @@
     <string name="setting_display_page_auto_collapse_thinking_desc">Automatically collapse thinking content after thinking is complete</string>
     <string name="setting_display_page_show_updates_title">Show Updates</string>
     <string name="setting_display_page_show_updates_desc">Whether to display app update notifications</string>
+    <string name="setting_display_page_code_card_mode_title">Code Card Mode</string>
+    <string name="setting_display_page_code_card_mode_desc">Display code blocks as collapsible cards to keep chat interface clean</string>
     <string name="setting_display_page_title">Display Settings</string>
     
     <!-- Color Mode -->

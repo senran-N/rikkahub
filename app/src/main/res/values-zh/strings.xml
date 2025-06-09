@@ -176,6 +176,11 @@
     <!-- Code Block -->
     <string name="code_block_copy">复制代码</string>
     <string name="code_block_preview">预览</string>
+    <string name="lines">行</string>
+    <string name="expand">展开</string>
+    <string name="close">关闭</string>
+    <string name="preview">预览</string>
+    <string name="click_to_view_full_code">点击查看完整代码</string>
     
     <!-- Mermaid Diagram -->
     <string name="mermaid_export">导出</string>
@@ -191,6 +196,8 @@
     <string name="setting_display_page_auto_collapse_thinking_desc">思考完成自动折叠思考内容</string>
     <string name="setting_display_page_show_updates_title">显示更新</string>
     <string name="setting_display_page_show_updates_desc">是否显示应用更新通知</string>
+    <string name="setting_display_page_code_card_mode_title">代码卡片模式</string>
+    <string name="setting_display_page_code_card_mode_desc">将代码块显示为可折叠的卡片，保持聊天界面简洁</string>
     <string name="setting_display_page_title">显示设置</string>
     
     <!-- Color Mode -->

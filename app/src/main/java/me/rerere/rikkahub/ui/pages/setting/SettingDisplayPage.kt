@@ -128,6 +128,25 @@ fun SettingDisplayPage(vm: SettingVM = koinViewModel()) {
                     },
                 )
             }
+
+            item {
+                ListItem(
+                    headlineContent = {
+                        Text(stringResource(R.string.setting_display_page_code_card_mode_title))
+                    },
+                    supportingContent = {
+                        Text(stringResource(R.string.setting_display_page_code_card_mode_desc))
+                    },
+                    trailingContent = {
+                        Switch(
+                            checked = displaySetting.codeCardMode,
+                            onCheckedChange = {
+                                updateDisplaySetting(displaySetting.copy(codeCardMode = it))
+                            }
+                        )
+                    },
+                )
+            }
         }
     }
 }
