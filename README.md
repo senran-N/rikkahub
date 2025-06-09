@@ -56,6 +56,7 @@ Technology stack documentation:
 
 > You need a `google-services.json` file at `app` folder to build the app.
 
+This branch uses AI to drive development. Please understand that some commits may be experimental or unconventional.
 ## 💰 Donate
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X71DVU91)
