@@ -126,7 +126,7 @@ object ClaudeProvider : Provider<ProviderSetting.Claude> {
         // 从 JsonObject 中提取必要的信息
         val id = bodyJson["id"]?.jsonPrimitive?.contentOrNull ?: ""
         val model = bodyJson["model"]?.jsonPrimitive?.contentOrNull ?: ""
-        val content = bodyJson["content"]?.jsonArray ?: error("content is null")
+        val content = bodyJson["content"]?.jsonArray ?: JsonArray(emptyList())
         val stopReason = bodyJson["stop_reason"]?.jsonPrimitive?.contentOrNull ?: "unknown"
         val usage = parseTokenUsage(bodyJson["usage"] as? JsonObject)
 
@@ -260,7 +260,7 @@ object ClaudeProvider : Provider<ProviderSetting.Claude> {
         return buildJsonObject {
             put("model", params.model.modelId)
             put("messages", buildMessages(messages))
-            put("max_tokens", 4096) // Claude 需要明确指定 max_tokens
+            put("max_tokens", 64000) // Claude 需要明确指定 max_tokens
 
             if (params.temperature != null && (params.thinkingBudget ?: 0) == 0) put(
                 "temperature",

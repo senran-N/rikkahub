@@ -212,6 +212,7 @@ data class DisplaySetting(
     val autoCloseThinking: Boolean = true,
     val showUpdates: Boolean = true,
     val codeCardMode: Boolean = true,
+    val showMessageJumper: Boolean = true,
 )
 
 fun Settings.isNotConfigured() = providers.all { it.models.isEmpty() }
