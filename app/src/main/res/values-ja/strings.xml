@@ -123,13 +123,19 @@
     <string name="assistant_page_memory_count">記憶: %d</string>
     <string name="assistant_page_no_system_prompt">システムプロンプトなし</string>
     <string name="assistant_page_top_p_value">Top P: %s</string>
-    <string name="assistant_page_inject_message_time">メッセージ時間を注入</string>
-    <string name="assistant_page_inject_message_time_desc">各メッセージの送信時間をコンテキストに注入して、モデルがメッセージがいつ送信されたかを理解できるようにするかどうか。これを有効にするとトークンの消費が増えることに注意してください</string>
     <string name="assistant_page_thinking_budget">思考バジェット</string>
     <string name="assistant_page_thinking_budget_desc">モデルが生成すべき思考トークンの数。0は思考が無効になることを意味し、空白はモデルのデフォルト値を使用することを意味します。</string>
     <string name="assistant_page_thinking_budget_tokens">%s トークン</string>
     <string name="assistant_page_thinking_budget_default">デフォルト</string>
     <string name="assistant_page_thinking_budget_warning">注意：異なるプロバイダーは様々な思考バジェットAPIフォーマットを定義しており、アプリはすべてに対応できないため、このオプションが機能しない場合があります。機能しない場合は、下のカスタムボディを使用してリクエストをカスタマイズすることをお勧めします。</string>
+    <string name="assistant_page_message_template">チャットコンテンツテンプレート</string>
+    <string name="assistant_page_message_template_desc">チャットメッセージがLLMに送信される前のコンテンツ形式を制御します。通常は変更する必要がありません</string>
+    <string name="assistant_page_template_preview">プレビュー:</string>
+    <string name="assistant_page_template_variable_role">役割</string>
+    <string name="assistant_page_template_variable_message">内容</string>
+    <string name="assistant_page_template_variable_time">時間</string>
+    <string name="assistant_page_template_variable_date">日付</string>
+    <string name="assistant_page_template_variables_label">変数:</string>
     
     <!-- Custom Headers and Bodies -->
     <string name="assistant_page_custom_headers">カスタムヘッダー</string>
@@ -224,9 +230,9 @@
     <string name="setting_mcp_page_transport_type_desc">MCPサーバーの転送プロトコルタイプを選択</string>
     <string name="setting_mcp_page_server_url">サーバーURL</string>
     <string name="setting_mcp_page_sse_url_desc">SSE転送サーバーのURLアドレス</string>
-    <string name="setting_mcp_page_websocket_url_desc">WebSocketサーバーのURLアドレス</string>
+    <string name="setting_mcp_page_streamable_http_url_desc">ストリーミングHTTPサーバーのURLアドレス</string>
     <string name="setting_mcp_page_sse_url_placeholder">https://example.com/sse</string>
-    <string name="setting_mcp_page_websocket_url_placeholder">wss://example.com/ws</string>
+    <string name="setting_mcp_page_streamable_http_url_placeholder">https://example.com/mcp</string>
     <string name="setting_mcp_page_custom_headers">カスタムヘッダー</string>
     <string name="setting_mcp_page_custom_headers_desc">MCPサーバーリクエストにカスタムHTTPヘッダーを追加</string>
     <string name="setting_mcp_page_header_name">ヘッダー名</string>

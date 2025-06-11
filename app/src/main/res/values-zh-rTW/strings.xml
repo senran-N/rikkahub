@@ -121,13 +121,19 @@
     <string name="assistant_page_memory_count">記憶: %d</string>
     <string name="assistant_page_no_system_prompt">無系統提示詞</string>
     <string name="assistant_page_top_p_value">Top P: %s</string>
-    <string name="assistant_page_inject_message_time">注入訊息時間</string>
-    <string name="assistant_page_inject_message_time_desc">是否把每條訊息的發送時間注入到上下文中，以便模型理解訊息發送時間，注意開啟會消耗更多token</string>
     <string name="assistant_page_thinking_budget">思考預算</string>
     <string name="assistant_page_thinking_budget_desc">模型應該生成的思考內容的token數量。0表示將禁用思考，留空表示使用模型的預設值。</string>
     <string name="assistant_page_thinking_budget_tokens">%s token</string>
     <string name="assistant_page_thinking_budget_default">預設</string>
     <string name="assistant_page_thinking_budget_warning">注意，由於不同提供商定義了各種不同的思考預算API格式，APP無法考慮到，因此這個選項不一定起作用，如果不起作用，推薦使用下面的自定義body來自定義請求</string>
+    <string name="assistant_page_message_template">聊天內容模板</string>
+    <string name="assistant_page_message_template_desc">控制聊天訊息在發送給LLM之前的內容格式，通常不需要修改</string>
+    <string name="assistant_page_template_preview">預覽:</string>
+    <string name="assistant_page_template_variable_role">角色</string>
+    <string name="assistant_page_template_variable_message">內容</string>
+    <string name="assistant_page_template_variable_time">時間</string>
+    <string name="assistant_page_template_variable_date">日期</string>
+    <string name="assistant_page_template_variables_label">變數:</string>
     
     <!-- Custom Headers and Bodies -->
     <string name="assistant_page_custom_headers">自定義 Headers</string>
@@ -222,9 +228,9 @@
     <string name="setting_mcp_page_transport_type_desc">選擇MCP伺服器的傳輸協定類型</string>
     <string name="setting_mcp_page_server_url">伺服器地址</string>
     <string name="setting_mcp_page_sse_url_desc">SSE傳輸伺服器的URL地址</string>
-    <string name="setting_mcp_page_websocket_url_desc">WebSocket伺服器的URL地址</string>
+    <string name="setting_mcp_page_streamable_http_url_desc">串流HTTP伺服器的URL地址</string>
     <string name="setting_mcp_page_sse_url_placeholder">https://example.com/sse</string>
-    <string name="setting_mcp_page_websocket_url_placeholder">wss://example.com/ws</string>
+    <string name="setting_mcp_page_streamable_http_url_placeholder">https://example.com/mcp</string>
     <string name="setting_mcp_page_custom_headers">自定義請求頭</string>
     <string name="setting_mcp_page_custom_headers_desc">為MCP伺服器請求添加自定義HTTP頭</string>
     <string name="setting_mcp_page_header_name">請求頭名稱</string>

@@ -1,8 +1,14 @@
 package me.rerere.rikkahub.di
 
 import androidx.room.Room
+import io.pebbletemplates.pebble.PebbleEngine
+import io.pebbletemplates.pebble.loader.Loader
+import io.pebbletemplates.pebble.loader.MemoryLoader
 import kotlinx.serialization.json.Json
+import me.rerere.ai.ui.MessageTransformer
+import me.rerere.rikkahub.data.ai.AssistantTemplateLoader
 import me.rerere.rikkahub.data.ai.GenerationHandler
+import me.rerere.rikkahub.data.ai.TemplateTransformer
 import me.rerere.rikkahub.data.api.RikkaHubAPI
 import me.rerere.rikkahub.data.datastore.SettingsStore
 import me.rerere.rikkahub.data.db.AppDatabase
@@ -13,6 +19,7 @@ import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.kotlinx.serialization.asConverterFactory
+import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 val dataSourceModule = module {
@@ -25,6 +32,19 @@ val dataSourceModule = module {
             .addMigrations(Migration_6_7)
             .build()
     }
+
+    single {
+        AssistantTemplateLoader(get())
+    }
+
+    single {
+        PebbleEngine.Builder()
+            .loader(get<AssistantTemplateLoader>())
+            .defaultLocale(Locale.getDefault())
+            .build()
+    }
+
+    single { TemplateTransformer(get(), get()) }
 
     single {
         get<AppDatabase>().conversationDao()

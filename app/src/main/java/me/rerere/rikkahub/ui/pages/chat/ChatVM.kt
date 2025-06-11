@@ -43,13 +43,13 @@ import me.rerere.ai.ui.UIMessage
 import me.rerere.ai.ui.UIMessagePart
 import me.rerere.ai.ui.finishReasoning
 import me.rerere.ai.ui.isEmptyInputMessage
-import me.rerere.ai.ui.transformers.MessageTimeTransformer
 import me.rerere.ai.ui.transformers.PlaceholderTransformer
 import me.rerere.ai.ui.transformers.ThinkTagTransformer
 import me.rerere.rikkahub.data.ai.Base64ImageToLocalFileTransformer
 import me.rerere.rikkahub.data.ai.DocumentAsPromptTransformer
 import me.rerere.rikkahub.data.ai.GenerationChunk
 import me.rerere.rikkahub.data.ai.GenerationHandler
+import me.rerere.rikkahub.data.ai.TemplateTransformer
 import me.rerere.rikkahub.data.datastore.Settings
 import me.rerere.rikkahub.data.datastore.SettingsStore
 import me.rerere.rikkahub.data.datastore.findModelById
@@ -95,6 +95,7 @@ class ChatVM(
     private val conversationRepo: ConversationRepository,
     private val memoryRepository: MemoryRepository,
     private val generationHandler: GenerationHandler,
+    private val templateTransformer: TemplateTransformer,
     val mcpManager: McpManager,
     val updateChecker: UpdateChecker,
 ) : ViewModel() {
@@ -289,9 +290,7 @@ class ChatVM(
                 memories = { memoryRepository.getMemoriesOfAssistant(settings.value.assistantId.toString()) },
                 inputTransformers = buildList {
                     addAll(inputTransformers)
-                    if (settings.value.getCurrentAssistant().enableMessageTime) {
-                        add(MessageTimeTransformer)
-                    }
+                    add(templateTransformer)
                 },
                 outputTransformers = outputTransformers,
                 tools = buildList {

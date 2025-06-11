@@ -121,13 +121,19 @@
     <string name="assistant_page_memory_count">Memory: %d</string>
     <string name="assistant_page_no_system_prompt">No system prompt</string>
     <string name="assistant_page_top_p_value">Top P: %s</string>
-    <string name="assistant_page_inject_message_time">Inject Message Time</string>
-    <string name="assistant_page_inject_message_time_desc">Whether to inject the message sending time into the context to help the model understand when each message was sent. Note that enabling this will consume more tokens</string>
     <string name="assistant_page_thinking_budget">Thinking Budget</string>
     <string name="assistant_page_thinking_budget_desc">The number of thoughts tokens that the model should generate. 0 means thinking will be disabled, and blank means using the default value of the model.</string>
     <string name="assistant_page_thinking_budget_tokens">%s tokens</string>
     <string name="assistant_page_thinking_budget_default">Default</string>
     <string name="assistant_page_thinking_budget_warning">Note: Different providers define various thinking budget API formats that the APP cannot accommodate for all, so this option may not work. If it doesn\'t work, we recommend using the custom body below to customize your request.</string>
+    <string name="assistant_page_message_template">Message Content Template</string>
+    <string name="assistant_page_message_template_desc">Controls the content format of chat messages before being sent to the LLM, usually no need to modify</string>
+    <string name="assistant_page_template_preview">Preview:</string>
+    <string name="assistant_page_template_variable_role">Role</string>
+    <string name="assistant_page_template_variable_message">Content</string>
+    <string name="assistant_page_template_variable_time">Time</string>
+    <string name="assistant_page_template_variable_date">Date</string>
+    <string name="assistant_page_template_variables_label">Variables:</string>
     
     <!-- Custom Headers and Bodies -->
     <string name="assistant_page_custom_headers">Custom Headers</string>
@@ -231,9 +237,9 @@
     <string name="setting_mcp_page_transport_type_desc">Select the transport protocol type for the MCP server</string>
     <string name="setting_mcp_page_server_url">Server URL</string>
     <string name="setting_mcp_page_sse_url_desc">URL address for SSE transport server</string>
-    <string name="setting_mcp_page_websocket_url_desc">URL address for WebSocket server</string>
+    <string name="setting_mcp_page_streamable_http_url_desc">URL address for Streamable HTTP server</string>
     <string name="setting_mcp_page_sse_url_placeholder">https://example.com/sse</string>
-    <string name="setting_mcp_page_websocket_url_placeholder">wss://example.com/ws</string>
+    <string name="setting_mcp_page_streamable_http_url_placeholder">https://example.com/mcp</string>
     <string name="setting_mcp_page_custom_headers">Custom Headers</string>
     <string name="setting_mcp_page_custom_headers_desc">Add custom HTTP headers for MCP server requests</string>
     <string name="setting_mcp_page_header_name">Header Name</string>

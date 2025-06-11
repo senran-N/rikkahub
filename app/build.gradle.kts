@@ -20,8 +20,8 @@ android {
         applicationId = "me.rerere.rikkahub"
         minSdk = 26
         targetSdk = 36
-        versionCode = 54
-        versionName = "0.8.8"
+        versionCode = 56
+        versionName = "0.9.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
@@ -154,6 +154,9 @@ dependencies {
     implementation(libs.okhttp.sse)
     implementation(libs.retrofit)
     implementation(libs.retrofit.serialization.json)
+
+    // pebble (template engine)
+    implementation(libs.pebble)
 
     // coil
     implementation(libs.coil.compose)
